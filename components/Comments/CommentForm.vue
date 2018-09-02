@@ -118,6 +118,7 @@
         this.isLoading = true
         this.form.contributionId = this.post._id
         this.form.parentCommentId = this.replyComment ? this.replyComment._id : null
+        await this.$store.dispatch('messages/create', { text: 'some text', userId: this.user._id }).then((res) => {console.log(JSON.stringify(res, null, 2))}).catch((res) => {console.log(JSON.stringify(res, null, 2))})
         await this.$store.dispatch('comments/create', this.form)
           .then((res) => {
             this.$store.dispatch('comments/fetchByContributionId', this.post._id)

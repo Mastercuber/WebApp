@@ -24,6 +24,9 @@
           <filter-select></filter-select>
         </div>
         <div class="hc-navbar-right">
+          <div class="hc-navbar-item hc-navbar-chat">
+            <hc-chat></hc-chat>
+          </div>
           <div class="hc-navbar-item hc-navbar-language is-hidden-mobile">
             <language-select></language-select>
           </div>
