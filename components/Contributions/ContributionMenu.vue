@@ -14,6 +14,15 @@
           <hc-icon icon="eye"></hc-icon> {{ $t('component.contribution.actionEnable') }}
         </template>
       </b-dropdown-item>
+      <b-dropdown-item @click="toggleBlacklist">
+        <template v-if="isBlacklisted">
+
+          <hc-icon icon="check"></hc-icon> {{ $t('component.contribution.actionUnblockAuthor') }}
+        </template>
+        <template v-else>
+          <hc-icon icon="ban"></hc-icon> {{ $t('component.contribution.actionBlockAuthor') }}
+        </template>
+      </b-dropdown-item>
       <!--
       <b-dropdown-item>
         <hc-icon icon="flag"></hc-icon> {{ $t('component.contribution.actionReport') }}
@@ -28,8 +37,11 @@
 
 <script>
   import {mapGetters} from 'vuex'
+  import blacklistable from '~/components/mixins/blacklistable'
+
   export default {
     name: 'hc-contribution-menu',
+    mixins: [blacklistable],
     props: {
       post: {
         type: Object,
@@ -48,6 +60,9 @@
       })
     },
     methods: {
+      author(){
+        return this.post.user
+      },
       toggleEnabled () {
         let data = {
           isEnabled: !this.post.isEnabled
