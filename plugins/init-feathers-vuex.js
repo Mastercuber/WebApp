@@ -14,7 +14,7 @@ const requireModule = require.context(
 
 export default async ({app, store, req, res}) => {
   const feathersClient = createApiClient({app, req, res})
-  const { auth, FeathersVuex } = feathersVuex(feathersClient, { idField: '_id' })
+  const { FeathersVuex } = feathersVuex(feathersClient, { idField: '_id' })
 
   Vue.use(FeathersVuex)
   Vue.use(Vuex)

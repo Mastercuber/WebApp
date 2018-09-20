@@ -1,5 +1,4 @@
 import feathersVuex from 'feathers-vuex'
-import Vue from 'vue';
 
 let servicePlugin = (feathersClient) => {
   const { service } = feathersVuex(feathersClient, { idField: '_id' })
@@ -31,12 +30,12 @@ let servicePlugin = (feathersClient) => {
         if (data.length > 0) {
           commit('setCurrent', data[0])
         } else {
-          commit('setCurrent', {});
+          commit('setCurrent', {})
         }
       },
       async toggleBlacklist ({commit, dispatch, state}, author) {
-        let current = state.copy;
-        let blacklist = current .blacklist
+        let current = state.copy
+        let blacklist = current.blacklist
         let userId = author._id
         if (blacklist.includes(userId)) {
           blacklist = blacklist.filter(id => id !== userId)

@@ -1,4 +1,3 @@
-import feathersVuex from 'feathers-vuex'
 import Vue from 'vue'
 import createApiClient from '../helpers/createApiClient'
 
