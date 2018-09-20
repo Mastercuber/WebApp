@@ -6,6 +6,7 @@
     <form class="comment-form" @submit.prevent="submitComment">
       <hc-editor identifier="comment"
         ref="editor"
+        v-on:input="editorText"
         editorClass="autowrap"
         v-model="form.content"
         :editorOptions="editorOptions" />
@@ -94,6 +95,9 @@
           this.$parent.closeCommentForm()
         }
       },
+      editorText (newText) {
+        this.$emit('input', newText)
+      },
       reply (comment) {
         if (!comment) {
           return
@@ -121,13 +125,13 @@
 
         await this.$store.dispatch('comments/create', this.form)
           .then((res) => {
-            this.$store.dispatch('comments/fetchByContributionId', this.post._id)
             this.$snackbar.open({
               message: this.$t('component.contribution.commentSubmitSuccess', 'Thanks for your comment. You are awesome.'),
               duration: 4000,
               type: 'is-success'
             })
             this.form.content = ''
+            this.isLoading = false
           })
           .catch((error) => {
             console.error(error)
@@ -135,6 +139,7 @@
               message: error.message,
               type: 'is-danger'
             })
+            this.isLoading = false
           })
 
         if (this.replyComment) {
