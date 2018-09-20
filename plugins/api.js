@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import createApiClient from '../helpers/createApiClient'
 
 export default ({app, env, store, redirect, router, req, res}) => {
-  const api = createApiClient({req, res})
+  const api = createApiClient({app, req, res})
   const { FeathersVuex } = feathersVuex(api, { idField: '_id' })
 
   Vue.use(FeathersVuex)

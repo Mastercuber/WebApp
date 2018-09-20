@@ -6,25 +6,32 @@ import urlHelper from '~/helpers/urls'
 import Cookie from 'cookie-universal'
 
 const authKey = 'feathers-jwt'
-const endpoint = urlHelper.buildEndpointURL(process.env.API_HOST, { port: process.env.API_PORT })
 let socket
-if (process.env.ENV === 'production') {
-  socket = socketio(io(endpoint), { timeout: 20000 })
-  if (process.server) {
-    setTimeout(() => {
-      // close server connection as content was delivered already after 30 seconds at latest
-      try {
-        socket.close()
-      } catch (err) {
-        console.log(err)
-      }
-    }, 30000)
+
+const getSocket = (app) => {
+  if (socket) return socket
+
+  const endpoint = urlHelper.buildEndpointURL(app.$env.API_HOST, { port: app.$env.API_PORT })
+  if (process.env.ENV === 'production') {
+    socket = socketio(io(endpoint), { timeout: 20000 })
+    if (process.server) {
+      setTimeout(() => {
+        // close server connection as content was delivered already after 30 seconds at latest
+        try {
+          socket.close()
+        } catch (err) {
+          console.log(err)
+        }
+      }, 30000)
+    }
+  } else {
+    socket = socketio(io(endpoint))
   }
-} else {
-  socket = socketio(io(endpoint))
+
+  return socket
 }
 
-let createApiClient = ({req, res}) => {
+let createApiClient = ({app, req, res}) => {
   const cookies = Cookie(req, res)
   const storageMapping = {
     getItem: (key) => {
@@ -52,7 +59,7 @@ let createApiClient = ({req, res}) => {
   }
 
   let api = feathers()
-    .configure(socket)
+    .configure(getSocket(app))
     .configure(authentication({
       storage: storageMapping,
       storageKey: authKey,
