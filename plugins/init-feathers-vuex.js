@@ -16,6 +16,6 @@ export default async ({app, store, req, res}) => {
 
   const servicePlugins = requireModule.keys().map(modulePath => requireModule(modulePath).default(feathersClient))
   servicePlugins.forEach((servicePlugin) => {
-    servicePlugin(store);
-  });
-};
+    servicePlugin(store)
+  })
+}
