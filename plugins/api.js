@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import createApiClient from '../helpers/createApiClient'
 
-export default ({app, env, store, redirect, router, req, res}) => {
+export default ({app, store, redirect, router, req, res}) => {
   const api = createApiClient({app, req, res})
   const { FeathersVuex } = feathersVuex(api, { idField: '_id' })
 
@@ -15,7 +15,7 @@ export default ({app, env, store, redirect, router, req, res}) => {
       all: [
         async (hook) => {
           // hook.accessToken = await api.passport.getJWT()
-          if (env.NODE_ENV === 'development') {
+          if (app.$env.NODE_ENV === 'development') {
             console.log('# API:', `${hook.method} ${hook.path}`)
             console.info('data', hook.data)
             // console.log('# ' + hook.accessToken)
@@ -25,7 +25,7 @@ export default ({app, env, store, redirect, router, req, res}) => {
       ]
     },
     async error (ctx) {
-      if (env.NODE_ENV === 'development') {
+      if (app.$env.NODE_ENV === 'development') {
         console.log('####################')
         console.error(ctx.error)
         // console.info('JWT TOKEN: ', app.$cookies.get(authKey))
