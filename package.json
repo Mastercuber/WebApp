@@ -117,7 +117,8 @@
   },
   "devDependencies": {
     "@nuxtjs/webpackmonitor": "~0.1.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/server-test-utils": "^1.0.0-beta.25",
+    "@vue/test-utils": "^1.0.0-beta.25",
     "ava": "~0.25.0",
     "backpack-core": "~0.7.0",
     "browser-env": "~3.2.4",
@@ -140,10 +141,10 @@
     "require-extension-hooks-babel": "~0.1.1",
     "require-extension-hooks-vue": "~1.0.0",
     "sass-loader": "~6.0.7",
+    "sinon": "^6.3.4",
     "source-map-support": "~0.5.6",
     "vue-docgen-api": "^2.3.11",
-    "vue-style-loader": "~4.1.0",
-    "vue-test-utils": "^1.0.0-beta.11"
+    "vue-style-loader": "~4.1.0"
   },
   "ava": {
     "require": [
