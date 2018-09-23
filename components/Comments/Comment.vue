@@ -108,8 +108,8 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
-  import author from '~/components/Author/Author.vue'
-  import commentForm from '~/components/Comments/CommentForm.vue'
+  import author from '../Author/Author.vue'
+  import commentForm from '../Comments/CommentForm.vue'
   import linkifyHtml from 'linkifyjs/html'
 
   export default {

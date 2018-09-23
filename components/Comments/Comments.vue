@@ -33,8 +33,8 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import comment from '~/components/Comments/Comment.vue'
-  import commentForm from '~/components/Comments/CommentForm.vue'
+  import comment from '../Comments/Comment.vue'
+  import commentForm from '../Comments/CommentForm.vue'
 
   export default {
     name: 'hc-comments',
