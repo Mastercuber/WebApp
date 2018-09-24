@@ -11,7 +11,7 @@
 
 
 <script>
-  import HcTopbar from '~/components/layout/Topbar.vue'
+  import HcTopbar from '../layout/Topbar.vue'
 
   export default {
     name: 'hc-frame',

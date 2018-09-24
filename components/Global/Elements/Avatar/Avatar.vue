@@ -18,7 +18,7 @@
 
 
 <script>
-  import thumbnailHelper from '~/helpers/thumbnails'
+  import thumbnailHelper from '../../../../helpers/thumbnails'
   import { throttle } from 'lodash'
   import moment from 'moment'
 

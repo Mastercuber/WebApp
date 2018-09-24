@@ -101,7 +101,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import ContributionCard from '~/components/Contributions/ContributionCard.vue'
+  import ContributionCard from '../Contributions/ContributionCard.vue'
   import { castArray, flatMap } from 'lodash'
 
   export default {

@@ -11,9 +11,9 @@
 </template>
 
 <script>
-  import CanDoAction from '~/components/CanDos/Action'
-  import CanDoCount from '~/components/CanDos/Count'
-  import CanDoDifficulty from '~/components/CanDos/Difficulty'
+  import CanDoAction from '../CanDos/Action'
+  import CanDoCount from '../CanDos/Count'
+  import CanDoDifficulty from '../CanDos/Difficulty'
 
   export default {
     name: 'hc-contribution-card-cando',

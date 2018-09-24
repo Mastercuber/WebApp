@@ -7,7 +7,7 @@
 
 <script>
   import Delta from 'quill-delta'
-  import EditorMentionsSearch from '~/components/Mentions/Search'
+  import EditorMentionsSearch from '../Mentions/Search'
 
   let offset = 10
   const lastLetterTyped = (delta, source) => {

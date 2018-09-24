@@ -8,7 +8,7 @@
 
 <script>
   let offset = 10
-  import EmojiChooser from '~/components/Editor/Emojis/Chooser'
+  import EmojiChooser from '../../Editor/Emojis/Chooser'
   import Delta from 'quill-delta'
 
   export default {

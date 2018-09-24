@@ -25,7 +25,7 @@
 
 <script>
   import { extend, map } from 'lodash'
-  import FilterItem from '~/components/Filters/FilterItem.vue'
+  import FilterItem from '../Filters/FilterItem.vue'
 
   export default {
     name: 'hc-filter-list',

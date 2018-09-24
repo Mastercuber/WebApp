@@ -53,10 +53,10 @@
 </template>
 
 <script>
-  import Author from '~/components/Author/Author.vue'
-  import ContributionCardCanDo from '~/components/Contributions/ContributionCardCanDo'
-  import ContributionCardFooter from '~/components/Contributions/ContributionCardFooter'
-  import thumbnailHelper from '~/helpers/thumbnails'
+  import Author from '../Author/Author.vue'
+  import ContributionCardCanDo from '../Contributions/ContributionCardCanDo'
+  import ContributionCardFooter from '../Contributions/ContributionCardFooter'
+  import thumbnailHelper from '../../helpers/thumbnails'
 
   export default {
     name: 'hc-contribution-card',

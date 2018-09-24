@@ -231,12 +231,12 @@
 </template>
 
 <script>
-  import CategoriesSelect from '~/components/Categories/CategoriesSelect.vue'
-  import Author from '~/components/Author/Author.vue'
+  import CategoriesSelect from '../Categories/CategoriesSelect.vue'
+  import Author from '../Author/Author.vue'
   import {mapGetters} from 'vuex'
   import validUrl from 'valid-url'
-  import ContributionImage from '~/components/Contributions/ContributionImage.vue'
-  import EditorMentions from '~/components/Mentions/EditorMentions'
+  import ContributionImage from '../Contributions/ContributionImage.vue'
+  import EditorMentions from '../Mentions/EditorMentions'
   import { isEmpty } from 'lodash'
   import { validationMixin } from 'vuelidate'
   import { required, minLength, maxLength } from 'vuelidate/lib/validators'

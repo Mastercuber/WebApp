@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import SearchItem from '~/components/Search/Item.vue'
+  import SearchItem from '../Search/Item.vue'
 
   export default {
     name: 'hc-search-group',

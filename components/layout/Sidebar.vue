@@ -12,8 +12,8 @@
 
 <script>
   import {mapGetters, mapActions} from 'vuex'
-  import HcSidebarToggle from '~/components/layout/SidebarToggle.vue'
-  import HcSidebarMenu from '~/components/layout/SidebarMenu.vue'
+  import HcSidebarToggle from '../layout/SidebarToggle.vue'
+  import HcSidebarMenu from '../layout/SidebarMenu.vue'
 
   export default {
     components: {

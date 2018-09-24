@@ -81,7 +81,7 @@
 
 <script>
   import {mapGetters, mapActions} from 'vuex'
-  import NotificationItem from '~/components/Notifications/Item.vue'
+  import NotificationItem from '../Notifications/Item.vue'
   import {isEmpty} from 'lodash'
   import InfiniteLoading from 'vue-infinite-loading/src/components/InfiniteLoading.vue'
   import {throttle} from 'lodash'

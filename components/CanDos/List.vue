@@ -34,8 +34,8 @@
 </template>
 
 <script>
-  import CanDoAction from '~/components/CanDos/Action'
-  import CanDoCount from '~/components/CanDos/Count'
+  import CanDoAction from '../CanDos/Action'
+  import CanDoCount from '../CanDos/Count'
 
   export default {
     name: 'hc-cando-list',

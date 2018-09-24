@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import author from '~/components/Author/Author.vue'
+  import author from '../Author/Author.vue'
   import { isEmpty } from 'lodash'
   import sanitize from 'sanitize-html'
 

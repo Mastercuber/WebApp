@@ -11,9 +11,9 @@
 </template>
 
 <script>
-  import SearchItemGroup from '~/components/Search/ItemGroup.vue'
+  import SearchItemGroup from '../Search/ItemGroup.vue'
   import $ from 'jquery'
-  import { scrollCheck } from '~/helpers/scroll-tools'
+  import { scrollCheck } from '../../helpers/scroll-tools'
 
   export default {
     name: 'hc-search-list',

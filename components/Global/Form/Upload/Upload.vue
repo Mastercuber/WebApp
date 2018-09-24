@@ -43,7 +43,7 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import urlHelper from '~/helpers/urls'
+  import urlHelper from '../../../../helpers/urls'
 
   /*
   * We use a forked version of vue-clip here

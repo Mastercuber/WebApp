@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import SearchList from '~/components/Search/List.vue'
+  import SearchList from '../Search/List.vue'
 
   export default {
     name: 'hc-editor-mentions-search',

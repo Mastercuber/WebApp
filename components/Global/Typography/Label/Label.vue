@@ -6,7 +6,7 @@
 
 
 <script>
-  import translatable from '~/components/mixins/translatable'
+  import translatable from '../../../mixins/translatable'
 
   export default {
     name: 'hc-label',

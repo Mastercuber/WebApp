@@ -66,10 +66,10 @@
 </template>
 
 <script>
-  import EditorLinks from '~/components/Editor/Links/EditorLinks'
-  import EditorEmbeds from '~/components/Editor/Embeds/EditorEmbeds'
-  import EditorEmojis from '~/components/Editor/Emojis/EditorEmojis'
-  import EditorMentions from '~/components/Mentions/EditorMentions'
+  import EditorLinks from '../../../Editor/Links/EditorLinks'
+  import EditorEmbeds from '../../../Editor/Embeds/EditorEmbeds'
+  import EditorEmojis from '../../../Editor/Emojis/EditorEmojis'
+  import EditorMentions from '../../../Mentions/EditorMentions'
   import Emitter from 'emitter-js'
   import Delta from 'quill-delta'
 

@@ -69,8 +69,8 @@
 <script>
   import { validationMixin } from "vuelidate"
   import { required, minLength, maxLength } from "vuelidate/lib/validators"
-  import animatable from '~/components/mixins/animatable'
-  import pageForm from '~/components/Pages/PageForm'
+  import animatable from '../mixins/animatable'
+  import pageForm from '../Pages/PageForm'
 
   const languages = ['de', 'en']
   let defaultForm = {

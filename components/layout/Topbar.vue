@@ -54,11 +54,11 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import LanguageSelect from '~/components/layout/LanguageSelect.vue'
-  import TopSearch from '~/components/layout/TopSearch.vue'
-  import FilterSelect from '~/components/layout/FilterSelect.vue'
-  import Notifications from '~/components/Notifications/Notifications.vue'
-  import UserMenu from '~/components/layout/UserMenu.vue'
+  import LanguageSelect from '../layout/LanguageSelect.vue'
+  import TopSearch from '../layout/TopSearch.vue'
+  import FilterSelect from '../layout/FilterSelect.vue'
+  import Notifications from '../Notifications/Notifications.vue'
+  import UserMenu from '../layout/UserMenu.vue'
 
   import {throttle} from 'lodash'
 

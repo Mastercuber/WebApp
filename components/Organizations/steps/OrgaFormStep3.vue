@@ -38,7 +38,7 @@
 </template>
 
 <script>
-  import CategoriesSelect from "~/components/Categories/CategoriesSelect.vue";
+  import CategoriesSelect from "../../Categories/CategoriesSelect.vue";
   import { isEmpty } from "lodash";
   import { validationMixin } from "vuelidate";
   import { required, minLength, maxLength } from "vuelidate/lib/validators";

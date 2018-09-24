@@ -93,7 +93,7 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import FilterList from '~/components/Filters/FilterList.vue'
+  import FilterList from '../Filters/FilterList.vue'
 
   import {isEqual, map} from 'lodash'
 

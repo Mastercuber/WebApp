@@ -98,6 +98,7 @@ export const actions = {
         // as we load new comments, make sure they are in the right order and unique
         let newComments = orderBy(uniq(state.comments.concat(result.data)), ['createdAt'], ['asc'])
         commit('setCommentCount', result.total)
+        debugger
         commit('set', newComments)
         commit('isLoading', false)
       })

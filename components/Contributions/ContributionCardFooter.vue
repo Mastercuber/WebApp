@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import ContributionMenu from '~/components/Contributions/ContributionMenu'
+  import ContributionMenu from '../Contributions/ContributionMenu'
   import { isEmpty } from 'lodash'
 
   export default {
